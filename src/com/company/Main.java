@@ -30,5 +30,20 @@ public class Main {
         System.out.println("teen= " + person.isTeen());
         person.setLastName("Smith");    // lastName is set to Smith
         System.out.println("fullName= " + person.getFullName());
+
+        // TEST for BankAccount Class
+        System.out.println("-------------------- BankAccount -----------------------");
+        BankAccount bankAccount = new BankAccount(1234567, 2121.00,"Sparrow", "stew.katz@gmail.com",1111234);
+        System.out.println(bankAccount.getAccountNumber()); // 1234567
+        System.out.println(bankAccount.getBalance()); // 2121.00
+        System.out.println(bankAccount.getCustomerName()); // "Sparrow"
+        System.out.println(bankAccount.getEmail()); // "stew.katz@gmail.com"
+        System.out.println(bankAccount.getPhoneNumber()); // 1111234
+        bankAccount.withdrawFunds(21);
+        System.out.println(bankAccount.getBalance()); // 2100.00
+        bankAccount.depositFunds(900);
+        System.out.println(bankAccount.getBalance()); // 3000.00
+        bankAccount.withdrawFunds(5000);
+        System.out.println(bankAccount.getBalance()); // 3000.00
     }
 }
