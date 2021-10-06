@@ -45,5 +45,50 @@ public class Main {
         System.out.println(bankAccount.getBalance()); // 3000.00
         bankAccount.withdrawFunds(5000);
         System.out.println(bankAccount.getBalance()); // 3000.00
+
+        // TEST for VipCustomer Class
+        System.out.println("-------------------- VipCustomer -----------------------");
+        VipCustomer empty = new VipCustomer();
+        System.out.println(empty.getName()); // "FirstName LastName"
+        System.out.println(empty.getEmail()); // "empty@email.com"
+        System.out.println(empty.getCreditLimit()); // 10000.00
+        VipCustomer twoFields = new VipCustomer("Bobby", 21000.00);
+        System.out.println(twoFields.getName()); // "Bobby"
+        System.out.println(twoFields.getEmail()); // "default@email.com"
+        System.out.println(twoFields.getCreditLimit()); // 21000.00
+        VipCustomer allFields = new VipCustomer("Alpha", 9999.00, "real@email.com");
+        System.out.println(allFields.getName()); // "Alpha"
+        System.out.println(allFields.getEmail()); // "real@email.com"
+        System.out.println(allFields.getCreditLimit()); // 9999.00
+
+        // TEST for WallArea Class
+        System.out.println("-------------------- WallArea -----------------------");
+        WallArea wall = new WallArea(5,4);
+        System.out.println("area= " + wall.getArea()); // 20.00
+        wall.setHeight(-1.5);
+        System.out.println("width= " + wall.getWidth()); // 5.0
+        System.out.println("height= " + wall.getHeight()); // 0.0
+        System.out.println("area= " + wall.getArea()); // 0.0
+
+        // TEST for Point Class
+        System.out.println("-------------------- Point -----------------------");
+        Point first = new Point(6, 5);
+        Point second = new Point(3, 1);
+        System.out.println("distance(0,0)= " + first.distance()); // 7.810249675906654
+        System.out.println("distance(second)= " + first.distance(second)); // 5.0
+        System.out.println("distance(2,2)= " + first.distance(2, 2)); // 5.0
+        Point point = new Point();
+        System.out.println("distance()= " + point.distance()); // 0.0
+
+        // TEST for Floor/Carpet/Calculator Class
+        System.out.println("-------------------- Floor/Carpet/Calculator -----------------------");
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75, 4.0);
+        Calculator calculator1 = new Calculator(floor, carpet);
+        System.out.println("total= " + calculator1.getTotalCost()); // 38.5
+        carpet = new Carpet(1.5);
+        floor = new Floor(5.4, 4.5);
+        calculator1 = new Calculator(floor, carpet);
+        System.out.println("total= " + calculator1.getTotalCost()); // 36.45
     }
 }
