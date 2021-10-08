@@ -114,5 +114,29 @@ public class Main {
         miata.moving();
         miata.steerRight();
         miata.doDonut();
+
+        // TEST for Circle/Cylinder Class
+        System.out.println("-------------------- Circle/Cylinder -----------------------");
+        Circle circle = new Circle(3.75);
+        System.out.println("circle.radius= " + circle.getRadius()); // 3.75
+        System.out.println("circle.area= " + circle.getArea()); // 44.178646691106465
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder.radius= " + cylinder.getRadius()); // 5.55
+        System.out.println("cylinder.height= " + cylinder.getHeight()); // 7.25
+        System.out.println("cylinder.area= " + cylinder.getArea()); // 96.76890771219959
+        System.out.println("cylinder.volume= " + cylinder.getVolume()); // 701.574580913447
+
+        // TEST for Rectangle/Cuboid Class
+        System.out.println("-------------------- Rectangle/Cuboid  -----------------------");
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle.width= " + rectangle.getWidth()); // 5.0
+        System.out.println("rectangle.length= " + rectangle.getLength()); // 10.0
+        System.out.println("rectangle.area= " + rectangle.getArea()); // 50.0
+        Cuboid cuboid = new Cuboid(5,10,5);
+        System.out.println("cuboid.width= " + cuboid.getWidth()); // 5.0
+        System.out.println("cuboid.length= " + cuboid.getLength()); // 10.0
+        System.out.println("cuboid.area= " + cuboid.getArea()); // 50.0
+        System.out.println("cuboid.height= " + cuboid.getHeight()); // 5.0
+        System.out.println("cuboid.volume= " + cuboid.getVolume()); // 250.0
     }
 }
