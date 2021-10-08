@@ -104,5 +104,15 @@ public class Main {
         number.subtract(one);
         System.out.println("number.real= " + number.getReal()); // 3.0
         System.out.println("number.imaginary= " + number.getImaginary()); // -5.0
+
+        // TEST for Vehicle/Car/Mazda Class
+        System.out.println("-------------------- Vehicle/Car/Mazda -----------------------");
+        Mazda miata = new Mazda();
+        miata.changeGear();
+        miata.moving();
+        miata.steerLeft();
+        miata.moving();
+        miata.steerRight();
+        miata.doDonut();
     }
 }
